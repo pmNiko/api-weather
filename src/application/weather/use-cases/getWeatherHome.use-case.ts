@@ -1,7 +1,7 @@
 import { WeatherEntity } from "../../../domain/weather/entity/weather.entity";
 import { WeatherRepository } from "../../../domain/weather/repository/weather.repository";
 
-export class WeatherHomeUseCase {
+export class GetWeatherHomeUseCase {
   constructor(private weatherRepository: WeatherRepository) {}
 
   async execute(): Promise<WeatherEntity> {

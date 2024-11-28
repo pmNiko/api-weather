@@ -1,12 +1,19 @@
 import { Request, Response } from "express";
-import { WeatherHomeUseCase } from "../../application/use-cases/weather/weather.use-case";
+import { WeatherService } from "../../application/weather/services/WeatherService";
 
 export class WeatherController {
-  constructor(private readonly weatherUseCase: WeatherHomeUseCase) {}
+  constructor(private readonly weatherServices: WeatherService) {}
 
-  public weatherHome = (req: Request, res: Response) => {
-    this.weatherUseCase
-      .execute()
+  public getWeatherHome = (req: Request, res: Response) => {
+    this.weatherServices
+      .getHome()
+      .then((data) => res.json(data))
+      .catch((err) => console.log(err));
+  };
+
+  public getWeatherProvincias = (req: Request, res: Response) => {
+    this.weatherServices
+      .getProvincias()
       .then((data) => res.json(data))
       .catch((err) => console.log(err));
   };

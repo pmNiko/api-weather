@@ -8,4 +8,9 @@ export class WeatherApiRepository {
     const data = await this.datasource.get("/home");
     return new WeatherEntity(data);
   }
+
+  async getProvincias(): Promise<any> {
+    const data = await this.datasource.get("/provincias");
+    return new WeatherEntity(data);
+  }
 }
