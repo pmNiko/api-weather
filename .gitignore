@@ -1,0 +1,14 @@
+node_modules/
+*.log
+
+coverage/
+
+dist/
+
+outputs/
+
+.env
+
+keys/
+
+
