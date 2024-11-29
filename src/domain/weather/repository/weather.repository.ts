@@ -1,4 +1,6 @@
+import { WeatherForecastEntity } from "../entity/weatherForecast.entity";
+
 export interface WeatherRepository {
-  getHome(): Promise<any>;
+  getHome(): Promise<WeatherForecastEntity>;
   getProvincias(): Promise<any>;
 }

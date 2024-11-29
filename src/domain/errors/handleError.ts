@@ -7,5 +7,7 @@ export const hanldeError = (res: Response, error: unknown) => {
     return;
   }
 
+  console.log(error);
+
   res.status(500).json({ error: "Internal server error - check logs" });
 };

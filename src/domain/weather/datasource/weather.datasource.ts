@@ -1,3 +1,3 @@
 export abstract class WeatherDatasource {
-  abstract get(path: string | null): Promise<any>;
+  abstract get<T>(path: string | null): Promise<T>;
 }
