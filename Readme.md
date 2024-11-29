@@ -2,8 +2,8 @@
 
 ---
 
-<p align="center" width="350">
-   <img align="center" width="350" src="./imgs/distribucion.png" />
+<p align="center" width="450">
+   <img align="center" width="450" src="./imgs/distribucion.png" />
 </p>
 <br/><br/>
 
