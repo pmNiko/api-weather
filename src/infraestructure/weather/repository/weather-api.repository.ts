@@ -1,7 +1,8 @@
 import { WeatherEntity } from "../../../domain/weather/entity/weather.entity";
+import { WeatherRepository } from "../../../domain/weather/repository/weather.repository";
 import { WeatherApiDatasource } from "../datasource/weather-api.datasource";
 
-export class WeatherApiRepository {
+export class WeatherApiRepository implements WeatherRepository {
   constructor(private readonly datasource = new WeatherApiDatasource()) {}
 
   async getHome(): Promise<any> {
