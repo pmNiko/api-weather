@@ -1,9 +1,9 @@
+import { WeatherDatasource } from "../../../domain/weather/datasource/weather.datasource";
 import { WeatherEntity } from "../../../domain/weather/entity/weather.entity";
 import { WeatherRepository } from "../../../domain/weather/repository/weather.repository";
-import { WeatherApiDatasource } from "../datasource/weather-api.datasource";
 
 export class WeatherApiRepository implements WeatherRepository {
-  constructor(private readonly datasource = new WeatherApiDatasource()) {}
+  constructor(private readonly datasource: WeatherDatasource) {}
 
   async getHome(): Promise<any> {
     const data = await this.datasource.get("/home");

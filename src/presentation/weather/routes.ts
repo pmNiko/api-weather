@@ -4,16 +4,18 @@ import { WeatherController } from "./controller";
 import { GetWeatherHomeUseCase } from "../../application/weather/use-cases/getWeatherHome.use-case";
 import { GetWeatherProvinciasUseCase } from "../../application/weather/use-cases/getWeatherProvincias.use-case";
 import { WeatherService } from "../../application/weather/services/WeatherService";
+import { WeatherApiDatasource } from "../../infraestructure/weather/datasource/weather-api.datasource";
 
 export class WeatherRoutes {
   constructor() {}
 
   static get routes(): Router {
     const router = Router();
-    const weatherApiRepository = new WeatherApiRepository();
-    const getWeatherUseCase = new GetWeatherHomeUseCase(weatherApiRepository);
+    const datasource = new WeatherApiDatasource();
+    const repository = new WeatherApiRepository(datasource);
+    const getWeatherUseCase = new GetWeatherHomeUseCase(repository);
     const getWeatherProvinceUseCase = new GetWeatherProvinciasUseCase(
-      weatherApiRepository
+      repository
     );
     const weatherServices = new WeatherService(
       getWeatherUseCase,
