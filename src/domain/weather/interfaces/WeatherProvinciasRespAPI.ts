@@ -1,6 +1,6 @@
 export interface WeatherProvinciaRespAPI {
-  origen: Origen;
   title: string;
+  origen: Origen;
   provincias: Provincia[];
   metadescripcion: string;
   keywords: string;

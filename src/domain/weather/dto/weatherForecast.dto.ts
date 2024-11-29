@@ -1,5 +1,5 @@
 import { WeatherForecastEntity } from "../entity/weatherForecast.entity";
-import { Ciudades, Provincia } from "../interfaces";
+import { Ciudades, Provincia } from "../interfaces/WeatherForecastRespAPI";
 
 export class WeatherForecastDTO {
   constructor(

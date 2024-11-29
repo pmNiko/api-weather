@@ -1,5 +1,10 @@
 import { CustomError } from "@helpers/errors/custom-error";
-import { Origen, Today, Ciudades, Provincia } from "../interfaces";
+import {
+  Ciudades,
+  Origen,
+  Provincia,
+  Today,
+} from "../interfaces/WeatherForecastRespAPI";
 
 export class WeatherForecastEntity {
   constructor(

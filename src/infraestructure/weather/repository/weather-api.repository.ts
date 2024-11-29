@@ -1,9 +1,11 @@
 import { WeatherRepository } from "@domain/weather/repository/weather.repository";
-import { WeatherForecastRespAPI } from "@domain/weather/interfaces";
 import { WeatherDatasource } from "@domain/weather/datasource/weather.datasource";
 import { WeatherForecastEntity } from "@domain/weather/entity/weatherForecast.entity";
 import { WeatherForecastDTO } from "@domain/weather/dto/weatherForecast.dto";
-import { WeatherEntity } from "@domain/weather/entity/weather.entity";
+import { WeatherForecastRespAPI } from "@domain/weather/interfaces/WeatherForecastRespAPI";
+import { WeatherProvinciaRespAPI } from "@domain/weather/interfaces/WeatherProvinciasRespAPI";
+import { WeatherProvinciaDTO } from "@domain/weather/dto/weatherProvincia.dto";
+import { WeatherProvinciaEntity } from "@domain/weather/entity/weatherProvincia.entity";
 
 export class WeatherApiRepository implements WeatherRepository {
   constructor(private readonly datasource: WeatherDatasource) {}
@@ -25,8 +27,15 @@ export class WeatherApiRepository implements WeatherRepository {
     return WeatherForecastDTO.fromEntity(entity);
   }
 
-  async getProvincias(): Promise<any> {
-    const data = await this.datasource.get("/provincias");
-    return new WeatherEntity(data);
+  async getProvincias(): Promise<WeatherProvinciaDTO> {
+    const resp = await this.datasource.get<WeatherProvinciaRespAPI>(
+      "/provincias"
+    );
+
+    const { title, origen, provincias } = resp;
+
+    const entity = new WeatherProvinciaEntity(title, origen, provincias);
+
+    return WeatherProvinciaDTO.fromEntity(entity);
   }
 }
