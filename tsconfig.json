@@ -110,9 +110,10 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "paths": {
-      "@application/*": ["./src/application/*"], 
       "@config/*": ["./src/config/*"], 
       "@domain/*": ["./src/domain/*"], 
+      "@helpers/*": ["./src/helpers/*"], 
+      "@application/*": ["./src/application/*"], 
       "@infraestructure/*": ["./src/infraestructure/*"], 
       "@presentation/*": ["./src/presentation/*"], 
     }

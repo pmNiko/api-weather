@@ -5,7 +5,6 @@ export class GetWeatherHomeUseCase {
   constructor(private weatherRepository: WeatherRepository) {}
 
   async execute(): Promise<WeatherForecastDTO> {
-    const rawWeatherData = await this.weatherRepository.getHome();
-    return rawWeatherData;
+    return await this.weatherRepository.getHome();
   }
 }

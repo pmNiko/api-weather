@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { WeatherService } from "@application/weather/services/WeatherService";
-import { hanldeError } from "@domain/errors/handleError";
+import { hanldeError } from "@helpers/errors/handleError";
 
 export class WeatherController {
   constructor(private readonly weatherServices: WeatherService) {}

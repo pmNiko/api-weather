@@ -1,4 +1,4 @@
-import { CustomError } from "@domain/errors/custom-error";
+import { CustomError } from "@helpers/errors/custom-error";
 import { Origen, Today, Ciudades, Provincia } from "../interfaces";
 
 export class WeatherForecastEntity {

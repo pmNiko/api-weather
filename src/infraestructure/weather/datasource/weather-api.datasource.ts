@@ -1,6 +1,6 @@
 import { envs } from "@config/plugins";
-import { CustomError } from "@domain/errors/custom-error";
 import { WeatherDatasource } from "@domain/weather/datasource/weather.datasource";
+import { CustomError } from "@helpers/errors/custom-error";
 
 export class WeatherApiDatasource implements WeatherDatasource {
   constructor() {}
