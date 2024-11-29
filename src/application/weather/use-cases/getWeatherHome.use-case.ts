@@ -1,5 +1,5 @@
-import { WeatherForecastDTO } from "../../../domain/weather/dto/weatherForecast.dto";
-import { WeatherRepository } from "../../../domain/weather/repository/weather.repository";
+import { WeatherForecastDTO } from "@domain/weather/dto/weatherForecast.dto";
+import { WeatherRepository } from "@domain/weather/repository/weather.repository";
 
 export class GetWeatherHomeUseCase {
   constructor(private weatherRepository: WeatherRepository) {}

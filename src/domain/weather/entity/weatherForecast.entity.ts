@@ -1,5 +1,5 @@
-import { CustomError } from "../../errors/custom-error";
-import { Ciudades, Origen, Provincia, Today } from "../interfaces";
+import { CustomError } from "@domain/errors/custom-error";
+import { Origen, Today, Ciudades, Provincia } from "../interfaces";
 
 export class WeatherForecastEntity {
   constructor(

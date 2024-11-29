@@ -1,5 +1,5 @@
-import { WeatherEntity } from "../../../domain/weather/entity/weather.entity";
-import { WeatherRepository } from "../../../domain/weather/repository/weather.repository";
+import { WeatherEntity } from "@domain/weather/entity/weather.entity";
+import { WeatherRepository } from "@domain/weather/repository/weather.repository";
 
 export class GetWeatherProvinciasUseCase {
   constructor(private weatherRepository: WeatherRepository) {}

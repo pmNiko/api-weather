@@ -1,9 +1,9 @@
-import { WeatherDatasource } from "../../../domain/weather/datasource/weather.datasource";
-import { WeatherForecastDTO } from "../../../domain/weather/dto/weatherForecast.dto";
-import { WeatherEntity } from "../../../domain/weather/entity/weather.entity";
-import { WeatherForecastEntity } from "../../../domain/weather/entity/weatherForecast.entity";
-import { WeatherForecastRespAPI } from "../../../domain/weather/interfaces";
-import { WeatherRepository } from "../../../domain/weather/repository/weather.repository";
+import { WeatherRepository } from "@domain/weather/repository/weather.repository";
+import { WeatherForecastRespAPI } from "@domain/weather/interfaces";
+import { WeatherDatasource } from "@domain/weather/datasource/weather.datasource";
+import { WeatherForecastEntity } from "@domain/weather/entity/weatherForecast.entity";
+import { WeatherForecastDTO } from "@domain/weather/dto/weatherForecast.dto";
+import { WeatherEntity } from "@domain/weather/entity/weather.entity";
 
 export class WeatherApiRepository implements WeatherRepository {
   constructor(private readonly datasource: WeatherDatasource) {}

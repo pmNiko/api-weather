@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { WeatherApiRepository } from "../../infraestructure/weather/repository/weather-api.repository";
 import { WeatherController } from "./controller";
-import { GetWeatherHomeUseCase } from "../../application/weather/use-cases/getWeatherHome.use-case";
-import { GetWeatherProvinciasUseCase } from "../../application/weather/use-cases/getWeatherProvincias.use-case";
-import { WeatherService } from "../../application/weather/services/WeatherService";
-import { WeatherApiDatasource } from "../../infraestructure/weather/datasource/weather-api.datasource";
+import { WeatherApiDatasource } from "@infraestructure/weather/datasource/weather-api.datasource";
+import { WeatherApiRepository } from "@infraestructure/weather/repository/weather-api.repository";
+import { GetWeatherHomeUseCase } from "@application/weather/use-cases/getWeatherHome.use-case";
+import { GetWeatherProvinciasUseCase } from "@application/weather/use-cases/getWeatherProvincias.use-case";
+import { WeatherService } from "@application/weather/services/WeatherService";
 
 export class WeatherRoutes {
   constructor() {}
