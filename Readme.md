@@ -2,6 +2,11 @@
 
 ---
 
+<p align="center" width="350">
+   <img align="center" width="350" src="./imgs/distribucion.png" />
+</p>
+<br/><br/>
+
 ###### Procedimiento de creación
 
     - A. Primer escenario consulta de datos a una API externa
