@@ -8,7 +8,7 @@ import { WeatherRepository } from "../../../domain/weather/repository/weather.re
 export class WeatherApiRepository implements WeatherRepository {
   constructor(private readonly datasource: WeatherDatasource) {}
 
-  async getHome(): Promise<any> {
+  async getHome(): Promise<WeatherForecastDTO> {
     const resp = await this.datasource.get<WeatherForecastRespAPI>("/home");
 
     const { title, origen, today, tomorrow, ciudades, provincias } = resp;

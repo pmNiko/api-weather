@@ -1,6 +1,6 @@
-import { WeatherForecastEntity } from "../entity/weatherForecast.entity";
+import { WeatherForecastDTO } from "../dto/weatherForecast.dto";
 
 export interface WeatherRepository {
-  getHome(): Promise<WeatherForecastEntity>;
+  getHome(): Promise<WeatherForecastDTO>;
   getProvincias(): Promise<any>;
 }
