@@ -74,3 +74,11 @@ src/
 └── app.ts
 
 ```
+
+> [!NOTE]  
+> Endpoints de consulta
+>
+> - /api/weather/home
+> - /api/weather/provincias
+>
+> \_
